@@ -11,7 +11,7 @@ const forecast = require("./utils/forecast");
 const viewsPath = path.join(__dirname, "../templates/views");
 //  to get the index.html path
 const publicDirectoryPath = path.join(__dirname, "../public");
-
+//  changed
 //  to get the partials folder inside of templates where single template can be created for whole application
 const partialsPath = path.join(__dirname, "../templates/partials");
 
