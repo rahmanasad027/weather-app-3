@@ -19,7 +19,13 @@ const forecast = (latitude, longitude, callback) => {
           body.current.temperature +
           " and the chances of rain is " +
           body.current.feelslike +
-          "%"
+          "%" +
+          "humidity in air is " +
+          body.current.humidity +
+          " weather description is " +
+          body.current.weather_descriptions +
+          " and visibility is " +
+          body.current.visibility
       );
     }
   });
