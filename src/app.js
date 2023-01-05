@@ -3,6 +3,10 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const app = express();
+
+//  port number is provided by heroku if it exists. if not it will use 3000
+const port = process.env.PORT || 4000;
+
 const geoCode = require("./utils/geoCode");
 const forecast = require("./utils/forecast");
 //  setting up hbs library (handleBars) with name of view engine to set up dynamic templating like
@@ -133,6 +137,6 @@ app.get("*", (req, res) => {
   });
 });
 //  at which port our app is loaded
-app.listen(4000, () => {
-  console.log("app is up and running on port 4000");
+app.listen(port, () => {
+  console.log("app is up and running on port" + port);
 });
